@@ -57,7 +57,7 @@
     - Nested types for sessions and statistics are properly defined
     - Type safety for all progress tracking data
 
-- [ ] **Create Quiz interfaces**
+- [x] **Create Quiz interfaces**
   - **Acceptance Criteria**:
     - QuizQuestion type with question, options, correctAnswer
     - QuizSession type with questions and results
@@ -80,21 +80,21 @@
 ## Phase 3: Basic Flashcard Component (Medium)
 
 ### 3.1 Core Card Component
-- [ ] **Create basic Card component**
+- [x] **Create basic Card component**
   - **Acceptance Criteria**:
     - Displays phrase with blank for verb
     - Shows verb in infinitive form
     - Component accepts card data as props
     - Renders without errors
 
-- [ ] **Implement flip animation**
+- [x] **Implement flip animation**
   - **Acceptance Criteria**:
     - Click to reveal answer
     - Smooth flip animation (200ms or less)
     - Answer displays correctly after flip
     - Animation works on all devices
 
-- [ ] **Add correct/incorrect buttons**
+- [x] **Add correct/incorrect buttons**
   - **Acceptance Criteria**:
     - Buttons appear after card flip
     - Buttons are clearly labeled
@@ -102,14 +102,14 @@
     - Buttons are accessible (keyboard navigation)
 
 ### 3.2 Card State Management
-- [ ] **Implement card state tracking**
+- [x] **Implement card state tracking**
   - **Acceptance Criteria**:
     - Track which cards have been studied
     - Track correct/incorrect answers
     - State persists during session
     - Can reset card state
 
-- [ ] **Add card navigation**
+- [x] **Add card navigation**
   - **Acceptance Criteria**:
     - Next/Previous buttons work
     - Can navigate through all cards

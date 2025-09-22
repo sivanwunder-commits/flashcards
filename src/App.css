@@ -104,6 +104,74 @@
   border-left: 4px solid #32CD32;
 }
 
+/* Study Page Specific Styles */
+.study-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2E8B57;
+}
+
+.stat-value.correct {
+  color: #32CD32;
+}
+
+.stat-value.incorrect {
+  color: #FF6B6B;
+}
+
+.loading-message,
+.error-message,
+.no-cards-message {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.error-message button {
+  background: linear-gradient(135deg, #FF6B6B, #DC143C);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.error-message button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .navigation {
@@ -117,5 +185,14 @@
   
   .main-content {
     padding: 1rem;
+  }
+  
+  .study-stats {
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    min-width: 100px;
+    padding: 0.75rem;
   }
 }
