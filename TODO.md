@@ -45,13 +45,13 @@
 ## Phase 2: Data Structure & Types (Easy-Medium)
 
 ### 2.1 Define TypeScript Types
-- [ ] **Create Card interface**
+- [x] **Create Card interface**
   - **Acceptance Criteria**:
     - Type includes: id, phrase, verb, tense, subject, correctAnswer, verbType, category
     - TypeScript compilation passes
     - IntelliSense works for card properties
 
-- [ ] **Create UserProgress interface**
+- [x] **Create UserProgress interface**
   - **Acceptance Criteria**:
     - Type includes: userId, sessions, wrongCards, statistics
     - Nested types for sessions and statistics are properly defined
@@ -64,14 +64,14 @@
     - Type safety for quiz functionality
 
 ### 2.2 Create Sample Data
-- [ ] **Create JSON file with sample cards**
+- [x] **Create JSON file with sample cards**
   - **Acceptance Criteria**:
     - At least 20 sample cards across different tenses
     - All required fields populated
     - JSON validates without errors
     - Covers regular and irregular verbs
 
-- [ ] **Create data loading utility**
+- [x] **Create data loading utility**
   - **Acceptance Criteria**:
     - Function to load cards from JSON file
     - Error handling for missing/invalid data

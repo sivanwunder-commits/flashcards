@@ -1,0 +1,204 @@
+[
+  {
+    "id": "c1",
+    "phrase": "Eu _____ (comer) pizza ontem",
+    "verb": "comer",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "comi",
+    "verbType": "regular",
+    "category": "food_verbs"
+  },
+  {
+    "id": "c2",
+    "phrase": "Nós _____ (comer) no restaurante na semana passada",
+    "verb": "comer",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "comemos",
+    "verbType": "regular",
+    "category": "food_verbs"
+  },
+  {
+    "id": "c3",
+    "phrase": "Ele _____ (falar) com o professor frequentemente",
+    "verb": "falar",
+    "tense": "pretérito_imperfeito",
+    "subject": "ele",
+    "correctAnswer": "falava",
+    "verbType": "regular",
+    "category": "school"
+  },
+  {
+    "id": "c4",
+    "phrase": "Eles _____ (viver) no Rio naquela época",
+    "verb": "viver",
+    "tense": "pretérito_imperfeito",
+    "subject": "eles",
+    "correctAnswer": "viviam",
+    "verbType": "regular",
+    "category": "life_events"
+  },
+  {
+    "id": "c5",
+    "phrase": "Eu _____ (ir) ao mercado antes de chegar em casa",
+    "verb": "ir",
+    "tense": "pretérito_mais_que_perfeito",
+    "subject": "eu",
+    "correctAnswer": "fora",
+    "verbType": "irregular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c6",
+    "phrase": "Nós já _____ (fazer) a lição quando ela chegou",
+    "verb": "fazer",
+    "tense": "pretérito_mais_que_perfeito",
+    "subject": "nós",
+    "correctAnswer": "tínhamos feito",
+    "verbType": "irregular",
+    "category": "school"
+  },
+  {
+    "id": "c7",
+    "phrase": "Amanhã eu _____ (viajar) para Lisboa",
+    "verb": "viajar",
+    "tense": "futuro_do_presente",
+    "subject": "eu",
+    "correctAnswer": "viajarei",
+    "verbType": "regular",
+    "category": "travel"
+  },
+  {
+    "id": "c8",
+    "phrase": "Eles _____ (trabalhar) no projeto no próximo mês",
+    "verb": "trabalhar",
+    "tense": "futuro_do_presente",
+    "subject": "eles",
+    "correctAnswer": "trabalharão",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c9",
+    "phrase": "Se eu tivesse tempo, eu _____ (estudar) mais",
+    "verb": "estudar",
+    "tense": "futuro_do_pretérito",
+    "subject": "eu",
+    "correctAnswer": "estudaria",
+    "verbType": "regular",
+    "category": "school"
+  },
+  {
+    "id": "c10",
+    "phrase": "Nós _____ (comprar) a casa se tivéssemos dinheiro",
+    "verb": "comprar",
+    "tense": "futuro_do_pretérito",
+    "subject": "nós",
+    "correctAnswer": "compraríamos",
+    "verbType": "regular",
+    "category": "finance"
+  },
+  {
+    "id": "c11",
+    "phrase": "É bom que ela _____ (ser) honesta",
+    "verb": "ser",
+    "tense": "presente_do_subjuntivo",
+    "subject": "ela",
+    "correctAnswer": "seja",
+    "verbType": "irregular",
+    "category": "character"
+  },
+  {
+    "id": "c12",
+    "phrase": "Espero que nós _____ (ter) sorte",
+    "verb": "ter",
+    "tense": "presente_do_subjuntivo",
+    "subject": "nós",
+    "correctAnswer": "tenhamos",
+    "verbType": "irregular",
+    "category": "life_events"
+  },
+  {
+    "id": "c13",
+    "phrase": "Se ele _____ (poder), ajudaria",
+    "verb": "poder",
+    "tense": "imperfeito_do_subjuntivo",
+    "subject": "ele",
+    "correctAnswer": "pudesse",
+    "verbType": "irregular",
+    "category": "helping"
+  },
+  {
+    "id": "c14",
+    "phrase": "Se nós _____ (saber), teríamos avisado",
+    "verb": "saber",
+    "tense": "imperfeito_do_subjuntivo",
+    "subject": "nós",
+    "correctAnswer": "soubéssemos",
+    "verbType": "irregular",
+    "category": "communication"
+  },
+  {
+    "id": "c15",
+    "phrase": "Quando eles _____ (chegar), avise-me",
+    "verb": "chegar",
+    "tense": "futuro_do_subjuntivo",
+    "subject": "eles",
+    "correctAnswer": "chegarem",
+    "verbType": "regular",
+    "category": "time"
+  },
+  {
+    "id": "c16",
+    "phrase": "Assim que eu _____ (terminar), vou ligar",
+    "verb": "terminar",
+    "tense": "futuro_do_subjuntivo",
+    "subject": "eu",
+    "correctAnswer": "terminar",
+    "verbType": "regular",
+    "category": "communication"
+  },
+  {
+    "id": "c17",
+    "phrase": "Se ele _____ (estudar), teria passado",
+    "verb": "estudar",
+    "tense": "pluscuamperfecto_do_subjuntivo",
+    "subject": "ele",
+    "correctAnswer": "tivesse estudado",
+    "verbType": "regular",
+    "category": "school"
+  },
+  {
+    "id": "c18",
+    "phrase": "Se nós _____ (fazer) visto, poderíamos viajar",
+    "verb": "fazer",
+    "tense": "pluscuamperfecto_do_subjuntivo",
+    "subject": "nós",
+    "correctAnswer": "tivéssemos feito",
+    "verbType": "irregular",
+    "category": "travel"
+  },
+  {
+    "id": "c19",
+    "phrase": "Tu _____ (beber) café ontem",
+    "verb": "beber",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "bebeste",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c20",
+    "phrase": "Vós _____ (partir) cedo naquela época",
+    "verb": "partir",
+    "tense": "pretérito_imperfeito",
+    "subject": "vós",
+    "correctAnswer": "partíeis",
+    "verbType": "regular",
+    "category": "travel"
+  }
+]
+
+
