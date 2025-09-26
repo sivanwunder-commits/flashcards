@@ -1,5 +1,7 @@
 import type { QuizQuestion, QuizSession, QuizAnswer, QuizResult } from '../types/quiz';
 import { progressTracker } from './progressTracker';
+import { adaptiveDifficultyManager } from './adaptiveDifficulty';
+import { settingsManager } from './settingsManager';
 import type { Card } from '../types/card';
 import { generateQuizQuestions } from './distractorGenerator';
 
@@ -10,7 +12,29 @@ class QuizSessionManager {
 
   // Start a new quiz session
   startNewSession(cards: Card[], questionCount: number = 10): QuizSession {
-    this.questions = generateQuizQuestions(cards, questionCount);
+    // Update adaptive difficulty settings from user preferences
+    let cardsToUse = cards;
+    try {
+      const adaptiveSettings = {
+        enableAdaptiveDifficulty: settingsManager.getSetting('enableAdaptiveDifficulty'),
+        difficultyAdjustmentSpeed: settingsManager.getSetting('difficultyAdjustmentSpeed'),
+        minimumQuestionsForAdjustment: settingsManager.getSetting('minimumQuestionsForAdjustment'),
+        performanceWindow: settingsManager.getSetting('performanceWindow')
+      };
+      adaptiveDifficultyManager.updateSettings(adaptiveSettings);
+      
+      // Filter cards based on adaptive difficulty (if enabled)
+      if (settingsManager.getSetting('enableAdaptiveDifficulty')) {
+        const filteredCards = adaptiveDifficultyManager.getFilteredCards(cards);
+        cardsToUse = filteredCards.length > 0 ? filteredCards : cards;
+      }
+    } catch (error) {
+      console.error('Error loading adaptive difficulty settings:', error);
+      // Use all cards if settings fail to load
+      cardsToUse = cards;
+    }
+    
+    this.questions = generateQuizQuestions(cardsToUse, questionCount);
     this.answers = [];
     
     const sessionId = `quiz_${Date.now()}`;
@@ -44,6 +68,9 @@ class QuizSessionManager {
     
     this.answers.push(answer);
     this.currentSession.answers = this.answers;
+    
+    // Update adaptive difficulty system
+    adaptiveDifficultyManager.recordAnswer(answer);
   }
 
   // Get current question
@@ -185,6 +212,25 @@ class QuizSessionManager {
       accuracy,
       timeSpent
     };
+  }
+
+  // Get adaptive difficulty information
+  getAdaptiveDifficultyInfo() {
+    return {
+      currentDifficulty: adaptiveDifficultyManager.getCurrentDifficulty(),
+      userPerformance: adaptiveDifficultyManager.getUserPerformance(),
+      explanation: adaptiveDifficultyManager.getDifficultyExplanation()
+    };
+  }
+
+  // Update adaptive difficulty settings
+  updateAdaptiveSettings(settings: any) {
+    adaptiveDifficultyManager.updateSettings(settings);
+  }
+
+  // Reset adaptive difficulty
+  resetAdaptiveDifficulty() {
+    adaptiveDifficultyManager.resetDifficulty();
   }
 }
 

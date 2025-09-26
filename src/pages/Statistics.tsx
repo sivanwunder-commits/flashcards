@@ -11,6 +11,7 @@ const Statistics: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedTimeRange, setSelectedTimeRange] = useState<number>(30);
+  const [selectedView, setSelectedView] = useState<'overview' | 'detailed' | 'trends'>('overview');
 
   useEffect(() => {
     const loadData = async () => {
@@ -111,11 +112,35 @@ const Statistics: React.FC = () => {
       <div className="statistics-header">
         <h1>📊 Your Progress Statistics</h1>
         <p>Track your learning journey and see how you're improving!</p>
+        
+        <div className="view-selector">
+          <button 
+            className={`view-button ${selectedView === 'overview' ? 'active' : ''}`}
+            onClick={() => setSelectedView('overview')}
+          >
+            📊 Overview
+          </button>
+          <button 
+            className={`view-button ${selectedView === 'detailed' ? 'active' : ''}`}
+            onClick={() => setSelectedView('detailed')}
+          >
+            🔍 Detailed
+          </button>
+          <button 
+            className={`view-button ${selectedView === 'trends' ? 'active' : ''}`}
+            onClick={() => setSelectedView('trends')}
+          >
+            📈 Trends
+          </button>
+        </div>
       </div>
 
-      {/* Overall Statistics */}
-      <div className="statistics-section">
-        <h2>📈 Overall Performance</h2>
+      {/* Conditional Content Based on View */}
+      {selectedView === 'overview' && (
+        <>
+          {/* Overall Statistics */}
+          <div className="statistics-section">
+            <h2>📈 Overall Performance</h2>
         <div className="stats-grid">
           <div className="stat-card">
             <div className="stat-icon">📚</div>
@@ -284,18 +309,105 @@ const Statistics: React.FC = () => {
         </div>
       </div>
 
-      {/* Data Management */}
-      <div className="statistics-section">
-        <h2>⚙️ Data Management</h2>
-        <div className="data-management">
-          <button onClick={exportProgress} className="export-button">
-            📤 Export Progress
-          </button>
-          <button onClick={clearAllProgress} className="clear-button">
-            🗑️ Clear All Data
-          </button>
+          {/* Data Management */}
+          <div className="statistics-section">
+            <h2>⚙️ Data Management</h2>
+            <div className="data-management">
+              <button onClick={exportProgress} className="export-button">
+                📤 Export Progress
+              </button>
+              <button onClick={clearAllProgress} className="clear-button">
+                🗑️ Clear All Data
+              </button>
+            </div>
+          </div>
+        </>
+      )}
+
+      {selectedView === 'detailed' && (
+        <div className="statistics-section">
+          <h2>🔍 Detailed Analytics</h2>
+          <div className="detailed-stats">
+            <div className="analytics-card">
+              <h3>📊 Performance Breakdown</h3>
+              <div className="breakdown-grid">
+                <div className="breakdown-item">
+                  <span className="breakdown-label">Average Time per Question:</span>
+                  <span className="breakdown-value">
+                    {statistics.averageTimePerQuestion ? 
+                      `${Math.round(statistics.averageTimePerQuestion / 1000)}s` : 
+                      'N/A'
+                    }
+                  </span>
+                </div>
+                <div className="breakdown-item">
+                  <span className="breakdown-label">Total Study Sessions:</span>
+                  <span className="breakdown-value">{statistics.totalSessions || 0}</span>
+                </div>
+                <div className="breakdown-item">
+                  <span className="breakdown-label">Best Single Session:</span>
+                  <span className="breakdown-value">{statistics.bestSessionScore || 0}%</span>
+                </div>
+                <div className="breakdown-item">
+                  <span className="breakdown-label">Most Studied Tense:</span>
+                  <span className="breakdown-value">
+                    {Object.keys(statistics.accuracyByTense).length > 0 ? 
+                      Object.entries(statistics.accuracyByTense)
+                        .sort(([,a], [,b]) => b.total - a.total)[0][0]
+                        .replace(/_/g, ' ') : 
+                      'N/A'
+                    }
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
+
+      {selectedView === 'trends' && (
+        <div className="statistics-section">
+          <h2>📈 Learning Trends</h2>
+          <div className="trends-container">
+            <div className="trend-card">
+              <h3>📅 Daily Progress</h3>
+              <div className="trend-chart">
+                {progressData.slice(-7).map((day, index) => (
+                  <div key={index} className="trend-bar">
+                    <div 
+                      className="trend-bar-fill"
+                      style={{ height: `${Math.max(day.accuracy, 10)}%` }}
+                      title={`${day.date}: ${day.accuracy}% accuracy`}
+                    ></div>
+                    <div className="trend-label">
+                      {new Date(day.date).toLocaleDateString('en-US', { weekday: 'short' })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="trend-card">
+              <h3>🎯 Accuracy Trend</h3>
+              <div className="accuracy-trend">
+                <div className="trend-line">
+                  {progressData.slice(-14).map((day, index) => (
+                    <div 
+                      key={index}
+                      className="trend-point"
+                      style={{ 
+                        left: `${(index / (progressData.slice(-14).length - 1)) * 100}%`,
+                        bottom: `${day.accuracy}%`
+                      }}
+                      title={`${day.date}: ${day.accuracy}%`}
+                    ></div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

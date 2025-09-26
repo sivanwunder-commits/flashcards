@@ -139,13 +139,17 @@ const Learn: React.FC = () => {
   return (
     <div className="learn-page">
       <div className="learn-header">
-        <h1>📚 Aprenda os Tempos Verbais</h1>
-        <p>Explore os diferentes tempos verbais em português e suas conjugações</p>
+        <div className="tropical-header">
+          <div className="tropical-icon">🌴</div>
+          <h1>📚 Aprenda os Tempos Verbais</h1>
+          <div className="tropical-icon">🌺</div>
+        </div>
+        <p>🌊 Explore os diferentes tempos verbais em português e suas conjugações 🏝️</p>
       </div>
 
       <div className="learn-content">
         <div className="tense-selector">
-          <h3>Escolha um tempo verbal:</h3>
+          <h3>🌊 Escolha um tempo verbal: 🌊</h3>
           <div className="tense-buttons">
             {Object.keys(tenses).map(tenseKey => (
               <button
@@ -153,6 +157,7 @@ const Learn: React.FC = () => {
                 className={`tense-button ${selectedTense === tenseKey ? 'active' : ''}`}
                 onClick={() => setSelectedTense(tenseKey)}
               >
+                <span className="tropical-icon">🌴</span>
                 {tenses[tenseKey].name}
               </button>
             ))}

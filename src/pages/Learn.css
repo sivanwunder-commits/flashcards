@@ -4,8 +4,22 @@
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   color: #333;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #55EFC4 0%, #74B9FF 100%);
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.learn-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="waves" patternUnits="userSpaceOnUse" width="40" height="40"><path d="M0 20 Q10 10 20 20 T40 20" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></pattern></defs><rect width="100" height="100" fill="url(%23waves)"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .learn-header {
@@ -58,26 +72,35 @@
 }
 
 .tense-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #00B894 0%, #0984E3 100%);
   color: white;
   border: none;
   padding: 1rem 1.5rem;
-  border-radius: 10px;
+  border-radius: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
 }
 
 .tense-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
 }
 
 .tense-button.active {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+  background: linear-gradient(135deg, #E17055 0%, #FDCB6E 100%);
+  box-shadow: 0 6px 20px rgba(225, 112, 85, 0.4);
+}
+
+.tense-button .tropical-icon {
+  font-size: 1.2rem;
+  animation: none;
 }
 
 .tense-details {
@@ -256,50 +279,285 @@
   margin-top: 0;
 }
 
-/* Responsive Design */
+/* ===== COMPREHENSIVE MOBILE OPTIMIZATION ===== */
+
+/* Mobile-First Responsive Design */
 @media (max-width: 768px) {
   .learn-page {
     padding: 1rem;
   }
 
+  .learn-header {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
   .learn-header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .learn-header p {
     font-size: 1rem;
   }
 
+  .tropical-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tropical-icon {
+    font-size: 1.5rem;
+  }
+
+  .tense-selector {
+    padding: 1.5rem;
+  }
+
+  .tense-selector h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
   .tense-buttons {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .tense-button {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+
+  .tense-details {
+    padding: 1.5rem;
+  }
+
+  .tense-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .tense-description {
+    font-size: 1rem;
+  }
+
+  .usage-section,
+  .examples-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .usage-section h3,
+  .examples-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .examples-section li {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .conjugation-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .conjugation-section h3 {
+    font-size: 1.3rem;
   }
 
   .verb-patterns {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pattern-group h5 {
+    font-size: 1rem;
+    padding: 0.4rem;
   }
 
   .conjugation-table {
+    padding: 0.8rem;
     overflow-x: auto;
+  }
+
+  .conjugation-table h4 {
+    font-size: 0.9rem;
   }
 
   .conjugation-table table {
     min-width: 250px;
   }
-}
 
-@media (max-width: 480px) {
-  .learn-header {
+  .conjugation-table th,
+  .conjugation-table td {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .irregular-verbs {
     padding: 1rem;
   }
 
-  .tense-selector,
+  .irregular-verbs h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .learn-page {
+    padding: 0.5rem;
+  }
+
+  .learn-header {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .learn-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .learn-header p {
+    font-size: 0.9rem;
+  }
+
+  .tropical-icon {
+    font-size: 1.2rem;
+  }
+
+  .tense-selector {
+    padding: 1rem;
+  }
+
+  .tense-selector h3 {
+    font-size: 1rem;
+  }
+
+  .tense-button {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
   .tense-details {
     padding: 1rem;
   }
 
+  .tense-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .tense-description {
+    font-size: 0.9rem;
+  }
+
+  .usage-section h3,
+  .examples-section h3 {
+    font-size: 1rem;
+  }
+
+  .usage-section p {
+    font-size: 0.9rem;
+  }
+
+  .examples-section li {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .conjugation-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .verb-patterns {
+    gap: 1rem;
+  }
+
+  .pattern-group h5 {
+    font-size: 0.9rem;
+  }
+
+  .conjugation-table {
+    padding: 0.6rem;
+  }
+
+  .conjugation-table h4 {
+    font-size: 0.8rem;
+  }
+
   .conjugation-table th,
   .conjugation-table td {
-    padding: 0.5rem;
-    font-size: 0.8rem;
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+
+  .irregular-verbs {
+    padding: 0.8rem;
+  }
+
+  .irregular-verbs h4 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Touch-Friendly Interactions */
+@media (hover: none) and (pointer: coarse) {
+  .tense-button {
+    min-height: 48px;
+    min-width: 120px;
+  }
+
+  .tense-button:active {
+    transform: scale(0.95);
+  }
+
+  .tense-button:hover {
+    transform: none;
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+  .learn-page {
+    padding: 0.8rem;
+  }
+
+  .learn-header {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .learn-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .tropical-header {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .tense-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .verb-patterns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .conjugation-table table {
+    min-width: 200px;
+  }
+}
+
+/* High DPI Display Optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .tropical-icon {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .tense-button {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

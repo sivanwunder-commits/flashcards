@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import QuizQuestion from '../components/QuizQuestion';
+import FillInTheBlank from '../components/FillInTheBlank';
 import { loadCards } from '../utils/dataLoader';
 import { quizSessionManager } from '../utils/quizSessionManager';
+import { settingsManager } from '../utils/settingsManager';
 import type { Card as CardType } from '../types/card';
 import type { QuizAnswer, QuizResult } from '../types/quiz';
+
+type QuizMode = 'multiple-choice' | 'fill-in-blank';
 
 const Quiz: React.FC = () => {
   const [cards, setCards] = useState<CardType[]>([]);
@@ -13,6 +17,14 @@ const Quiz: React.FC = () => {
   const [quizComplete, setQuizComplete] = useState(false);
   const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
   const [sessionStats, setSessionStats] = useState(quizSessionManager.getSessionStats());
+  const [quizMode, setQuizMode] = useState<QuizMode>(() => {
+    try {
+      return settingsManager.getSetting('defaultQuizMode');
+    } catch (error) {
+      console.error('Error loading quiz mode setting:', error);
+      return 'multiple-choice';
+    }
+  });
 
   useEffect(() => {
     const loadCardData = async () => {
@@ -45,7 +57,15 @@ const Quiz: React.FC = () => {
   const startQuiz = () => {
     if (cards.length === 0) return;
     
-    const session = quizSessionManager.startNewSession(cards, 10);
+    const questionCount = (() => {
+      try {
+        return settingsManager.getSetting('defaultQuestionCount');
+      } catch (error) {
+        console.error('Error loading question count setting:', error);
+        return 10;
+      }
+    })();
+    quizSessionManager.startNewSession(cards, questionCount);
     setQuizActive(true);
     setQuizComplete(false);
     setQuizResult(null);
@@ -124,22 +144,64 @@ const Quiz: React.FC = () => {
   if (!quizActive && !quizComplete) {
     return (
       <div className="quiz-page">
-        <h1>Quiz Mode</h1>
-        <p>Test your knowledge with multiple choice questions</p>
+        <h1>🧠 Quiz Mode</h1>
+        <p>Test your knowledge with different quiz formats</p>
+        
+        <div className="quiz-mode-selector">
+          <h3>Choose Quiz Mode:</h3>
+          <div className="mode-buttons">
+            <button
+              className={`mode-button ${quizMode === 'multiple-choice' ? 'active' : ''}`}
+              onClick={() => setQuizMode('multiple-choice')}
+            >
+              <span className="mode-icon">🔘</span>
+              <div className="mode-info">
+                <h4>Multiple Choice</h4>
+                <p>Choose from 4 options</p>
+              </div>
+            </button>
+            <button
+              className={`mode-button ${quizMode === 'fill-in-blank' ? 'active' : ''}`}
+              onClick={() => setQuizMode('fill-in-blank')}
+            >
+              <span className="mode-icon">✏️</span>
+              <div className="mode-info">
+                <h4>Fill in the Blank</h4>
+                <p>Type your answer</p>
+              </div>
+            </button>
+          </div>
+        </div>
         
         <div className="quiz-intro">
           <div className="quiz-info">
             <h3>Quiz Details</h3>
             <ul>
-              <li>10 multiple choice questions</li>
-              <li>4 options per question</li>
-              <li>Immediate feedback after each answer</li>
+              <li>{(() => {
+              try {
+                return settingsManager.getSetting('defaultQuestionCount');
+              } catch (error) {
+                return 10;
+              }
+            })()} questions</li>
+              {quizMode === 'multiple-choice' ? (
+                <>
+                  <li>4 options per question</li>
+                  <li>Immediate feedback after each answer</li>
+                </>
+              ) : (
+                <>
+                  <li>Type your answers</li>
+                  <li>Smart typo detection</li>
+                  <li>Hints available</li>
+                </>
+              )}
               <li>Final score and statistics</li>
             </ul>
           </div>
           
           <button onClick={startQuiz} className="start-quiz-button">
-            Start Quiz
+            Start {quizMode === 'multiple-choice' ? 'Multiple Choice' : 'Fill-in-Blank'} Quiz
           </button>
         </div>
       </div>
@@ -188,6 +250,12 @@ const Quiz: React.FC = () => {
                 <span className="stat-label">Time:</span>
                 <span className="stat-value">{formatTime(sessionStats.timeSpent)}</span>
               </div>
+              <div className="stat-item difficulty-indicator">
+                <span className="stat-label">Level:</span>
+                <span className={`stat-value difficulty-${quizSessionManager.getAdaptiveDifficultyInfo().currentDifficulty.level}`}>
+                  {quizSessionManager.getAdaptiveDifficultyInfo().currentDifficulty.level.toUpperCase()}
+                </span>
+              </div>
             </div>
             
             <div className="progress-bar">
@@ -199,12 +267,35 @@ const Quiz: React.FC = () => {
           </div>
         )}
 
-        <QuizQuestion
-          question={currentQuestion}
-          onAnswer={handleAnswer}
-          questionNumber={currentQuestionNumber}
-          totalQuestions={totalQuestions}
-        />
+        {quizMode === 'multiple-choice' ? (
+          <QuizQuestion
+            question={currentQuestion}
+            onAnswer={handleAnswer}
+            questionNumber={currentQuestionNumber}
+            totalQuestions={totalQuestions}
+            timeLimit={(() => {
+              try {
+                return settingsManager.getSetting('enableTimer') ? settingsManager.getSetting('defaultTimeLimit') : undefined;
+              } catch (error) {
+                return undefined;
+              }
+            })()}
+          />
+        ) : (
+          <FillInTheBlank
+            card={cards.find(card => card.id === currentQuestion.cardId) || cards[0]}
+            onAnswer={handleAnswer}
+            questionNumber={currentQuestionNumber}
+            totalQuestions={totalQuestions}
+            timeLimit={(() => {
+              try {
+                return settingsManager.getSetting('enableTimer') ? settingsManager.getSetting('defaultTimeLimit') : undefined;
+              } catch (error) {
+                return undefined;
+              }
+            })()}
+          />
+        )}
       </div>
     );
   }
