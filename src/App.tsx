@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Study from './pages/Study';
 import Quiz from './pages/Quiz';
+import Learn from './pages/Learn';
 import Statistics from './pages/Statistics';
 import Settings from './pages/Settings';
 import './App.css';
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/study" element={<Study />} />
             <Route path="/quiz" element={<Quiz />} />
+            <Route path="/learn" element={<Learn />} />
             <Route path="/statistics" element={<Statistics />} />
             <Route path="/settings" element={<Settings />} />
           </Routes>

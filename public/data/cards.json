@@ -198,6 +198,1676 @@
     "correctAnswer": "partíeis",
     "verbType": "regular",
     "category": "travel"
+  },
+  {
+    "id": "c21",
+    "phrase": "Tu _____ (comer) frutas todos os dias",
+    "verb": "comer",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "comias",
+    "verbType": "regular",
+    "category": "food_verbs"
+  },
+  {
+    "id": "c22",
+    "phrase": "Eles _____ (comer) no café ontem",
+    "verb": "comer",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "comeram",
+    "verbType": "regular",
+    "category": "food_verbs"
+  },
+  {
+    "id": "c23",
+    "phrase": "Eu _____ (falar) português quando era criança",
+    "verb": "falar",
+    "tense": "pretérito_imperfeito",
+    "subject": "eu",
+    "correctAnswer": "falava",
+    "verbType": "regular",
+    "category": "school"
+  },
+  {
+    "id": "c24",
+    "phrase": "Nós _____ (falar) com os vizinhos ontem",
+    "verb": "falar",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "falamos",
+    "verbType": "regular",
+    "category": "communication"
+  },
+  {
+    "id": "c25",
+    "phrase": "Tu _____ (falar) muito rápido",
+    "verb": "falar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "falavas",
+    "verbType": "regular",
+    "category": "communication"
+  },
+  {
+    "id": "c26",
+    "phrase": "Eu _____ (viver) em São Paulo há dois anos",
+    "verb": "viver",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "vivi",
+    "verbType": "regular",
+    "category": "life_events"
+  },
+  {
+    "id": "c27",
+    "phrase": "Nós _____ (viver) felizes naquela casa",
+    "verb": "viver",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "vivíamos",
+    "verbType": "regular",
+    "category": "life_events"
+  },
+  {
+    "id": "c28",
+    "phrase": "Tu _____ (viver) no Brasil quando criança",
+    "verb": "viver",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "vivias",
+    "verbType": "regular",
+    "category": "life_events"
+  },
+  {
+    "id": "c29",
+    "phrase": "Eu _____ (ter) um carro novo",
+    "verb": "ter",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "tive",
+    "verbType": "irregular",
+    "category": "possessions"
+  },
+  {
+    "id": "c30",
+    "phrase": "Tu _____ (ter) muitos livros",
+    "verb": "ter",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "tinhas",
+    "verbType": "irregular",
+    "category": "possessions"
+  },
+  {
+    "id": "c31",
+    "phrase": "Eles _____ (ter) uma casa bonita",
+    "verb": "ter",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "tiveram",
+    "verbType": "irregular",
+    "category": "possessions"
+  },
+  {
+    "id": "c32",
+    "phrase": "Nós _____ (ter) tempo para estudar",
+    "verb": "ter",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "tínhamos",
+    "verbType": "irregular",
+    "category": "time"
+  },
+  {
+    "id": "c33",
+    "phrase": "Eu _____ (ser) estudante",
+    "verb": "ser",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "fui",
+    "verbType": "irregular",
+    "category": "identity"
+  },
+  {
+    "id": "c34",
+    "phrase": "Tu _____ (ser) médico",
+    "verb": "ser",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "eras",
+    "verbType": "irregular",
+    "category": "identity"
+  },
+  {
+    "id": "c35",
+    "phrase": "Eles _____ (ser) amigos",
+    "verb": "ser",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "foram",
+    "verbType": "irregular",
+    "category": "identity"
+  },
+  {
+    "id": "c36",
+    "phrase": "Nós _____ (ser) felizes",
+    "verb": "ser",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "éramos",
+    "verbType": "irregular",
+    "category": "identity"
+  },
+  {
+    "id": "c37",
+    "phrase": "Eu _____ (ir) à escola",
+    "verb": "ir",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "fui",
+    "verbType": "irregular",
+    "category": "movement"
+  },
+  {
+    "id": "c38",
+    "phrase": "Tu _____ (ir) ao cinema",
+    "verb": "ir",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "ias",
+    "verbType": "irregular",
+    "category": "movement"
+  },
+  {
+    "id": "c39",
+    "phrase": "Eles _____ (ir) para casa",
+    "verb": "ir",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "foram",
+    "verbType": "irregular",
+    "category": "movement"
+  },
+  {
+    "id": "c40",
+    "phrase": "Nós _____ (ir) de férias",
+    "verb": "ir",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "íamos",
+    "verbType": "irregular",
+    "category": "movement"
+  },
+  {
+    "id": "c41",
+    "phrase": "Eu _____ (fazer) o jantar",
+    "verb": "fazer",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "fiz",
+    "verbType": "irregular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c42",
+    "phrase": "Tu _____ (fazer) exercícios",
+    "verb": "fazer",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "fazias",
+    "verbType": "irregular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c43",
+    "phrase": "Eles _____ (fazer) a lição",
+    "verb": "fazer",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "fizeram",
+    "verbType": "irregular",
+    "category": "school"
+  },
+  {
+    "id": "c44",
+    "phrase": "Nós _____ (fazer) compras",
+    "verb": "fazer",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "fazíamos",
+    "verbType": "irregular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c45",
+    "phrase": "Eu _____ (poder) ajudar",
+    "verb": "poder",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "pude",
+    "verbType": "irregular",
+    "category": "helping"
+  },
+  {
+    "id": "c46",
+    "phrase": "Tu _____ (poder) vir",
+    "verb": "poder",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "podias",
+    "verbType": "irregular",
+    "category": "helping"
+  },
+  {
+    "id": "c47",
+    "phrase": "Eles _____ (poder) estudar",
+    "verb": "poder",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "puderam",
+    "verbType": "irregular",
+    "category": "helping"
+  },
+  {
+    "id": "c48",
+    "phrase": "Nós _____ (poder) viajar",
+    "verb": "poder",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "podíamos",
+    "verbType": "irregular",
+    "category": "helping"
+  },
+  {
+    "id": "c49",
+    "phrase": "Eu _____ (saber) a resposta",
+    "verb": "saber",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "soube",
+    "verbType": "irregular",
+    "category": "knowledge"
+  },
+  {
+    "id": "c50",
+    "phrase": "Tu _____ (saber) nadar",
+    "verb": "saber",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "sabias",
+    "verbType": "irregular",
+    "category": "knowledge"
+  },
+  {
+    "id": "c51",
+    "phrase": "Eles _____ (saber) português",
+    "verb": "saber",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "souberam",
+    "verbType": "irregular",
+    "category": "knowledge"
+  },
+  {
+    "id": "c52",
+    "phrase": "Nós _____ (saber) a verdade",
+    "verb": "saber",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "sabíamos",
+    "verbType": "irregular",
+    "category": "knowledge"
+  },
+  {
+    "id": "c53",
+    "phrase": "Eu _____ (querer) um café",
+    "verb": "querer",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "quis",
+    "verbType": "irregular",
+    "category": "desires"
+  },
+  {
+    "id": "c54",
+    "phrase": "Tu _____ (querer) viajar",
+    "verb": "querer",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "querias",
+    "verbType": "irregular",
+    "category": "desires"
+  },
+  {
+    "id": "c55",
+    "phrase": "Eles _____ (querer) estudar",
+    "verb": "querer",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "quiseram",
+    "verbType": "irregular",
+    "category": "desires"
+  },
+  {
+    "id": "c56",
+    "phrase": "Nós _____ (querer) ajudar",
+    "verb": "querer",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "queríamos",
+    "verbType": "irregular",
+    "category": "desires"
+  },
+  {
+    "id": "c57",
+    "phrase": "Eu _____ (ver) um filme",
+    "verb": "ver",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "vi",
+    "verbType": "irregular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c58",
+    "phrase": "Tu _____ (ver) televisão",
+    "verb": "ver",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "vias",
+    "verbType": "irregular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c59",
+    "phrase": "Eles _____ (ver) a lua",
+    "verb": "ver",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "viram",
+    "verbType": "irregular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c60",
+    "phrase": "Nós _____ (ver) os amigos",
+    "verb": "ver",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "víamos",
+    "verbType": "irregular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c61",
+    "phrase": "Eu _____ (dar) um presente",
+    "verb": "dar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "dei",
+    "verbType": "irregular",
+    "category": "gifts"
+  },
+  {
+    "id": "c62",
+    "phrase": "Tu _____ (dar) aulas",
+    "verb": "dar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "davas",
+    "verbType": "irregular",
+    "category": "work"
+  },
+  {
+    "id": "c63",
+    "phrase": "Eles _____ (dar) dinheiro",
+    "verb": "dar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "deram",
+    "verbType": "irregular",
+    "category": "gifts"
+  },
+  {
+    "id": "c64",
+    "phrase": "Nós _____ (dar) conselhos",
+    "verb": "dar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "dávamos",
+    "verbType": "irregular",
+    "category": "helping"
+  },
+  {
+    "id": "c65",
+    "phrase": "Eu _____ (vir) de casa",
+    "verb": "vir",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "vim",
+    "verbType": "irregular",
+    "category": "movement"
+  },
+  {
+    "id": "c66",
+    "phrase": "Tu _____ (vir) cedo",
+    "verb": "vir",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "vinhas",
+    "verbType": "irregular",
+    "category": "movement"
+  },
+  {
+    "id": "c67",
+    "phrase": "Eles _____ (vir) ontem",
+    "verb": "vir",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "vieram",
+    "verbType": "irregular",
+    "category": "movement"
+  },
+  {
+    "id": "c68",
+    "phrase": "Nós _____ (vir) sempre",
+    "verb": "vir",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "víamos",
+    "verbType": "irregular",
+    "category": "movement"
+  },
+  {
+    "id": "c69",
+    "phrase": "Eu _____ (trazer) comida",
+    "verb": "trazer",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "trouxe",
+    "verbType": "irregular",
+    "category": "food"
+  },
+  {
+    "id": "c70",
+    "phrase": "Tu _____ (trazer) livros",
+    "verb": "trazer",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "trazias",
+    "verbType": "irregular",
+    "category": "school"
+  },
+  {
+    "id": "c71",
+    "phrase": "Eles _____ (trazer) presentes",
+    "verb": "trazer",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "trouxeram",
+    "verbType": "irregular",
+    "category": "gifts"
+  },
+  {
+    "id": "c72",
+    "phrase": "Nós _____ (trazer) amigos",
+    "verb": "trazer",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "trazíamos",
+    "verbType": "irregular",
+    "category": "social"
+  },
+  {
+    "id": "c73",
+    "phrase": "Eu _____ (dizer) a verdade",
+    "verb": "dizer",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "disse",
+    "verbType": "irregular",
+    "category": "communication"
+  },
+  {
+    "id": "c74",
+    "phrase": "Tu _____ (dizer) mentiras",
+    "verb": "dizer",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "dizias",
+    "verbType": "irregular",
+    "category": "communication"
+  },
+  {
+    "id": "c75",
+    "phrase": "Eles _____ (dizer) olá",
+    "verb": "dizer",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "disseram",
+    "verbType": "irregular",
+    "category": "communication"
+  },
+  {
+    "id": "c76",
+    "phrase": "Nós _____ (dizer) adeus",
+    "verb": "dizer",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "dizíamos",
+    "verbType": "irregular",
+    "category": "communication"
+  },
+  {
+    "id": "c77",
+    "phrase": "Eu _____ (ouvir) música",
+    "verb": "ouvir",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "ouvi",
+    "verbType": "irregular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c78",
+    "phrase": "Tu _____ (ouvir) rádio",
+    "verb": "ouvir",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "ouvia",
+    "verbType": "irregular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c79",
+    "phrase": "Eles _____ (ouvir) notícias",
+    "verb": "ouvir",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "ouviram",
+    "verbType": "irregular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c80",
+    "phrase": "Nós _____ (ouvir) conversas",
+    "verb": "ouvir",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "ouvíamos",
+    "verbType": "irregular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c81",
+    "phrase": "Eu _____ (ler) um livro",
+    "verb": "ler",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "li",
+    "verbType": "irregular",
+    "category": "education"
+  },
+  {
+    "id": "c82",
+    "phrase": "Tu _____ (ler) jornais",
+    "verb": "ler",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "lias",
+    "verbType": "irregular",
+    "category": "education"
+  },
+  {
+    "id": "c83",
+    "phrase": "Eles _____ (ler) revistas",
+    "verb": "ler",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "leram",
+    "verbType": "irregular",
+    "category": "education"
+  },
+  {
+    "id": "c84",
+    "phrase": "Nós _____ (ler) histórias",
+    "verb": "ler",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "líamos",
+    "verbType": "irregular",
+    "category": "education"
+  },
+  {
+    "id": "c85",
+    "phrase": "Eu _____ (escrever) uma carta",
+    "verb": "escrever",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "escrevi",
+    "verbType": "irregular",
+    "category": "communication"
+  },
+  {
+    "id": "c86",
+    "phrase": "Tu _____ (escrever) poemas",
+    "verb": "escrever",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "escrevias",
+    "verbType": "irregular",
+    "category": "communication"
+  },
+  {
+    "id": "c87",
+    "phrase": "Eles _____ (escrever) emails",
+    "verb": "escrever",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "escreveram",
+    "verbType": "irregular",
+    "category": "communication"
+  },
+  {
+    "id": "c88",
+    "phrase": "Nós _____ (escrever) relatórios",
+    "verb": "escrever",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "escrevíamos",
+    "verbType": "irregular",
+    "category": "work"
+  },
+  {
+    "id": "c89",
+    "phrase": "Eu _____ (abrir) a porta",
+    "verb": "abrir",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "abri",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c90",
+    "phrase": "Tu _____ (abrir) a janela",
+    "verb": "abrir",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "abrias",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c91",
+    "phrase": "Eles _____ (abrir) a loja",
+    "verb": "abrir",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "abriram",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c92",
+    "phrase": "Nós _____ (abrir) presentes",
+    "verb": "abrir",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "abríamos",
+    "verbType": "regular",
+    "category": "gifts"
+  },
+  {
+    "id": "c93",
+    "phrase": "Eu _____ (fechar) o livro",
+    "verb": "fechar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "fechei",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c94",
+    "phrase": "Tu _____ (fechar) os olhos",
+    "verb": "fechar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "fechavas",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c95",
+    "phrase": "Eles _____ (fechar) a porta",
+    "verb": "fechar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "fecharam",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c96",
+    "phrase": "Nós _____ (fechar) a loja",
+    "verb": "fechar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "fechávamos",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c97",
+    "phrase": "Eu _____ (começar) a trabalhar",
+    "verb": "começar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "comecei",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c98",
+    "phrase": "Tu _____ (começar) a estudar",
+    "verb": "começar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "começavas",
+    "verbType": "regular",
+    "category": "education"
+  },
+  {
+    "id": "c99",
+    "phrase": "Eles _____ (começar) o jogo",
+    "verb": "começar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "começaram",
+    "verbType": "regular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c100",
+    "phrase": "Nós _____ (começar) a aula",
+    "verb": "começar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "começávamos",
+    "verbType": "regular",
+    "category": "education"
+  },
+  {
+    "id": "c101",
+    "phrase": "Eu _____ (acabar) o trabalho",
+    "verb": "acabar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "acabei",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c102",
+    "phrase": "Tu _____ (acabar) a lição",
+    "verb": "acabar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "acabavas",
+    "verbType": "regular",
+    "category": "education"
+  },
+  {
+    "id": "c103",
+    "phrase": "Eles _____ (acabar) o filme",
+    "verb": "acabar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "acabaram",
+    "verbType": "regular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c104",
+    "phrase": "Nós _____ (acabar) a reunião",
+    "verb": "acabar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "acabávamos",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c105",
+    "phrase": "Eu _____ (precisar) de ajuda",
+    "verb": "precisar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "precisei",
+    "verbType": "regular",
+    "category": "helping"
+  },
+  {
+    "id": "c106",
+    "phrase": "Tu _____ (precisar) de dinheiro",
+    "verb": "precisar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "precisavas",
+    "verbType": "regular",
+    "category": "finance"
+  },
+  {
+    "id": "c107",
+    "phrase": "Eles _____ (precisar) de tempo",
+    "verb": "precisar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "precisaram",
+    "verbType": "regular",
+    "category": "time"
+  },
+  {
+    "id": "c108",
+    "phrase": "Nós _____ (precisar) de paciência",
+    "verb": "precisar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "precisávamos",
+    "verbType": "regular",
+    "category": "character"
+  },
+  {
+    "id": "c109",
+    "phrase": "Eu _____ (gostar) de música",
+    "verb": "gostar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "gostei",
+    "verbType": "regular",
+    "category": "preferences"
+  },
+  {
+    "id": "c110",
+    "phrase": "Tu _____ (gostar) de filmes",
+    "verb": "gostar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "gostavas",
+    "verbType": "regular",
+    "category": "preferences"
+  },
+  {
+    "id": "c111",
+    "phrase": "Eles _____ (gostar) de viajar",
+    "verb": "gostar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "gostaram",
+    "verbType": "regular",
+    "category": "preferences"
+  },
+  {
+    "id": "c112",
+    "phrase": "Nós _____ (gostar) de ler",
+    "verb": "gostar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "gostávamos",
+    "verbType": "regular",
+    "category": "preferences"
+  },
+  {
+    "id": "c113",
+    "phrase": "Eu _____ (amar) minha família",
+    "verb": "amar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "amei",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c114",
+    "phrase": "Tu _____ (amar) os animais",
+    "verb": "amar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "amavas",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c115",
+    "phrase": "Eles _____ (amar) a natureza",
+    "verb": "amar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "amaram",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c116",
+    "phrase": "Nós _____ (amar) a vida",
+    "verb": "amar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "amávamos",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c117",
+    "phrase": "Eu _____ (odiar) mentiras",
+    "verb": "odiar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "odiei",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c118",
+    "phrase": "Tu _____ (odiar) violência",
+    "verb": "odiar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "odiavas",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c119",
+    "phrase": "Eles _____ (odiar) injustiça",
+    "verb": "odiar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "odiaram",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c120",
+    "phrase": "Nós _____ (odiar) guerra",
+    "verb": "odiar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "odiávamos",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c121",
+    "phrase": "Eu _____ (temer) o futuro",
+    "verb": "temer",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "temi",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c122",
+    "phrase": "Tu _____ (temer) a mudança",
+    "verb": "temer",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "temias",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c123",
+    "phrase": "Eles _____ (temer) o desconhecido",
+    "verb": "temer",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "temiram",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c124",
+    "phrase": "Nós _____ (temer) a solidão",
+    "verb": "temer",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "temíamos",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c125",
+    "phrase": "Eu _____ (esperar) o ônibus",
+    "verb": "esperar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "esperei",
+    "verbType": "regular",
+    "category": "transportation"
+  },
+  {
+    "id": "c126",
+    "phrase": "Tu _____ (esperar) a resposta",
+    "verb": "esperar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "esperavas",
+    "verbType": "regular",
+    "category": "communication"
+  },
+  {
+    "id": "c127",
+    "phrase": "Eles _____ (esperar) a oportunidade",
+    "verb": "esperar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "esperaram",
+    "verbType": "regular",
+    "category": "time"
+  },
+  {
+    "id": "c128",
+    "phrase": "Nós _____ (esperar) a chuva",
+    "verb": "esperar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "esperávamos",
+    "verbType": "regular",
+    "category": "weather"
+  },
+  {
+    "id": "c129",
+    "phrase": "Eu _____ (tentar) estudar",
+    "verb": "tentar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "tentei",
+    "verbType": "regular",
+    "category": "education"
+  },
+  {
+    "id": "c130",
+    "phrase": "Tu _____ (tentar) ajudar",
+    "verb": "tentar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "tentavas",
+    "verbType": "regular",
+    "category": "helping"
+  },
+  {
+    "id": "c131",
+    "phrase": "Eles _____ (tentar) resolver",
+    "verb": "tentar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "tentaram",
+    "verbType": "regular",
+    "category": "problem_solving"
+  },
+  {
+    "id": "c132",
+    "phrase": "Nós _____ (tentar) entender",
+    "verb": "tentar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "tentávamos",
+    "verbType": "regular",
+    "category": "education"
+  },
+  {
+    "id": "c133",
+    "phrase": "Tu _____ (estudar) matemática",
+    "verb": "estudar",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "estudaste",
+    "verbType": "regular",
+    "category": "education"
+  },
+  {
+    "id": "c134",
+    "phrase": "Eles _____ (estudar) português",
+    "verb": "estudar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "estudaram",
+    "verbType": "regular",
+    "category": "education"
+  },
+  {
+    "id": "c135",
+    "phrase": "Nós _____ (estudar) história",
+    "verb": "estudar",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "estudamos",
+    "verbType": "regular",
+    "category": "education"
+  },
+  {
+    "id": "c136",
+    "phrase": "Tu _____ (viajar) para o Brasil",
+    "verb": "viajar",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "viajaste",
+    "verbType": "regular",
+    "category": "travel"
+  },
+  {
+    "id": "c137",
+    "phrase": "Eles _____ (viajar) de avião",
+    "verb": "viajar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "viajaram",
+    "verbType": "regular",
+    "category": "travel"
+  },
+  {
+    "id": "c138",
+    "phrase": "Nós _____ (viajar) de carro",
+    "verb": "viajar",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "viajamos",
+    "verbType": "regular",
+    "category": "travel"
+  },
+  {
+    "id": "c139",
+    "phrase": "Tu _____ (comprar) roupas",
+    "verb": "comprar",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "compraste",
+    "verbType": "regular",
+    "category": "shopping"
+  },
+  {
+    "id": "c140",
+    "phrase": "Eles _____ (comprar) comida",
+    "verb": "comprar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "compraram",
+    "verbType": "regular",
+    "category": "shopping"
+  },
+  {
+    "id": "c141",
+    "phrase": "Nós _____ (comprar) presentes",
+    "verb": "comprar",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "compramos",
+    "verbType": "regular",
+    "category": "shopping"
+  },
+  {
+    "id": "c142",
+    "phrase": "Tu _____ (trabalhar) muito",
+    "verb": "trabalhar",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "trabalhaste",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c143",
+    "phrase": "Eles _____ (trabalhar) no escritório",
+    "verb": "trabalhar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "trabalharam",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c144",
+    "phrase": "Nós _____ (trabalhar) juntos",
+    "verb": "trabalhar",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "trabalhamos",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c145",
+    "phrase": "Eu _____ (viver) em Paris",
+    "verb": "viver",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "vivi",
+    "verbType": "regular",
+    "category": "life_events"
+  },
+  {
+    "id": "c146",
+    "phrase": "Tu _____ (vir) de manhã",
+    "verb": "vir",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "vieste",
+    "verbType": "irregular",
+    "category": "movement"
+  },
+  {
+    "id": "c147",
+    "phrase": "Eles _____ (viajar) de trem",
+    "verb": "viajar",
+    "tense": "pretérito_imperfeito",
+    "subject": "eles",
+    "correctAnswer": "viajavam",
+    "verbType": "regular",
+    "category": "travel"
+  },
+  {
+    "id": "c148",
+    "phrase": "Nós _____ (ver) o pôr do sol",
+    "verb": "ver",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "vimos",
+    "verbType": "irregular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c149",
+    "phrase": "Eu _____ (trazer) flores",
+    "verb": "trazer",
+    "tense": "pretérito_imperfeito",
+    "subject": "eu",
+    "correctAnswer": "trazia",
+    "verbType": "irregular",
+    "category": "gifts"
+  },
+  {
+    "id": "c150",
+    "phrase": "Tu _____ (trabalhar) à noite",
+    "verb": "trabalhar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "trabalhavas",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c151",
+    "phrase": "Eles _____ (tentar) novamente",
+    "verb": "tentar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "tentaram",
+    "verbType": "regular",
+    "category": "problem_solving"
+  },
+  {
+    "id": "c152",
+    "phrase": "Nós _____ (temer) o escuro",
+    "verb": "temer",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "tememos",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c153",
+    "phrase": "Eu _____ (querer) descansar",
+    "verb": "querer",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "quis",
+    "verbType": "irregular",
+    "category": "desires"
+  },
+  {
+    "id": "c154",
+    "phrase": "Tu _____ (precisar) de ajuda",
+    "verb": "precisar",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "precisaste",
+    "verbType": "regular",
+    "category": "helping"
+  },
+  {
+    "id": "c155",
+    "phrase": "Eles _____ (ouvir) música clássica",
+    "verb": "ouvir",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "ouviram",
+    "verbType": "irregular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c156",
+    "phrase": "Nós _____ (odiar) mentiras",
+    "verb": "odiar",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "odiamos",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c157",
+    "phrase": "Eu _____ (ler) todos os dias",
+    "verb": "ler",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "li",
+    "verbType": "irregular",
+    "category": "education"
+  },
+  {
+    "id": "c158",
+    "phrase": "Tu _____ (gostar) de praia",
+    "verb": "gostar",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "gostaste",
+    "verbType": "regular",
+    "category": "preferences"
+  },
+  {
+    "id": "c159",
+    "phrase": "Eles _____ (fechar) a porta",
+    "verb": "fechar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "fecharam",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c160",
+    "phrase": "Nós _____ (falar) baixo",
+    "verb": "falar",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "falamos",
+    "verbType": "regular",
+    "category": "communication"
+  },
+  {
+    "id": "c161",
+    "phrase": "Eu _____ (esperar) pacientemente",
+    "verb": "esperar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "esperei",
+    "verbType": "regular",
+    "category": "time"
+  },
+  {
+    "id": "c162",
+    "phrase": "Tu _____ (escrever) uma carta",
+    "verb": "escrever",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "escreveste",
+    "verbType": "irregular",
+    "category": "communication"
+  },
+  {
+    "id": "c163",
+    "phrase": "Eles _____ (dizer) a verdade",
+    "verb": "dizer",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "disseram",
+    "verbType": "irregular",
+    "category": "communication"
+  },
+  {
+    "id": "c164",
+    "phrase": "Nós _____ (dar) um presente",
+    "verb": "dar",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "demos",
+    "verbType": "irregular",
+    "category": "gifts"
+  },
+  {
+    "id": "c165",
+    "phrase": "Eu _____ (comprar) um livro",
+    "verb": "comprar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "comprei",
+    "verbType": "regular",
+    "category": "shopping"
+  },
+  {
+    "id": "c166",
+    "phrase": "Tu _____ (começar) cedo",
+    "verb": "começar",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "começaste",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c167",
+    "phrase": "Eles _____ (comer) frutas",
+    "verb": "comer",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "comeram",
+    "verbType": "regular",
+    "category": "food_verbs"
+  },
+  {
+    "id": "c168",
+    "phrase": "Nós _____ (amar) a música",
+    "verb": "amar",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "amamos",
+    "verbType": "regular",
+    "category": "emotions"
+  },
+  {
+    "id": "c169",
+    "phrase": "Eu _____ (acabar) o trabalho",
+    "verb": "acabar",
+    "tense": "pretérito_perfeito",
+    "subject": "eu",
+    "correctAnswer": "acabei",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c170",
+    "phrase": "Tu _____ (abrir) a janela",
+    "verb": "abrir",
+    "tense": "pretérito_perfeito",
+    "subject": "tu",
+    "correctAnswer": "abrste",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c171",
+    "phrase": "Eles _____ (terminar) a reunião",
+    "verb": "terminar",
+    "tense": "pretérito_perfeito",
+    "subject": "eles",
+    "correctAnswer": "terminaram",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c172",
+    "phrase": "Nós _____ (terminar) o projeto",
+    "verb": "terminar",
+    "tense": "pretérito_imperfeito",
+    "subject": "nós",
+    "correctAnswer": "terminávamos",
+    "verbType": "regular",
+    "category": "work"
+  },
+  {
+    "id": "c173",
+    "phrase": "Eu _____ (terminar) a lição",
+    "verb": "terminar",
+    "tense": "pretérito_imperfeito",
+    "subject": "eu",
+    "correctAnswer": "terminava",
+    "verbType": "regular",
+    "category": "education"
+  },
+  {
+    "id": "c174",
+    "phrase": "Tu _____ (terminar) o livro",
+    "verb": "terminar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "terminavas",
+    "verbType": "regular",
+    "category": "education"
+  },
+  {
+    "id": "c175",
+    "phrase": "Eles _____ (terminar) a festa",
+    "verb": "terminar",
+    "tense": "pretérito_imperfeito",
+    "subject": "eles",
+    "correctAnswer": "terminavam",
+    "verbType": "regular",
+    "category": "entertainment"
+  },
+  {
+    "id": "c176",
+    "phrase": "Nós _____ (partir) cedo",
+    "verb": "partir",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "partimos",
+    "verbType": "regular",
+    "category": "travel"
+  },
+  {
+    "id": "c177",
+    "phrase": "Eu _____ (partir) amanhã",
+    "verb": "partir",
+    "tense": "pretérito_imperfeito",
+    "subject": "eu",
+    "correctAnswer": "partia",
+    "verbType": "regular",
+    "category": "travel"
+  },
+  {
+    "id": "c178",
+    "phrase": "Tu _____ (partir) de casa",
+    "verb": "partir",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "partias",
+    "verbType": "regular",
+    "category": "travel"
+  },
+  {
+    "id": "c179",
+    "phrase": "Eles _____ (partir) juntos",
+    "verb": "partir",
+    "tense": "pretérito_imperfeito",
+    "subject": "eles",
+    "correctAnswer": "partiam",
+    "verbType": "regular",
+    "category": "travel"
+  },
+  {
+    "id": "c180",
+    "phrase": "Nós _____ (chegar) tarde",
+    "verb": "chegar",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "chegamos",
+    "verbType": "regular",
+    "category": "movement"
+  },
+  {
+    "id": "c181",
+    "phrase": "Eu _____ (chegar) cedo",
+    "verb": "chegar",
+    "tense": "pretérito_imperfeito",
+    "subject": "eu",
+    "correctAnswer": "chegava",
+    "verbType": "regular",
+    "category": "movement"
+  },
+  {
+    "id": "c182",
+    "phrase": "Tu _____ (chegar) sempre",
+    "verb": "chegar",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "chegavas",
+    "verbType": "regular",
+    "category": "movement"
+  },
+  {
+    "id": "c183",
+    "phrase": "Eles _____ (chegar) juntos",
+    "verb": "chegar",
+    "tense": "pretérito_imperfeito",
+    "subject": "eles",
+    "correctAnswer": "chegavam",
+    "verbType": "regular",
+    "category": "movement"
+  },
+  {
+    "id": "c184",
+    "phrase": "Nós _____ (beber) água",
+    "verb": "beber",
+    "tense": "pretérito_perfeito",
+    "subject": "nós",
+    "correctAnswer": "bebemos",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c185",
+    "phrase": "Eu _____ (beber) café",
+    "verb": "beber",
+    "tense": "pretérito_imperfeito",
+    "subject": "eu",
+    "correctAnswer": "bebia",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c186",
+    "phrase": "Tu _____ (beber) chá",
+    "verb": "beber",
+    "tense": "pretérito_imperfeito",
+    "subject": "tu",
+    "correctAnswer": "bebias",
+    "verbType": "regular",
+    "category": "daily_routine"
+  },
+  {
+    "id": "c187",
+    "phrase": "Eles _____ (beber) suco",
+    "verb": "beber",
+    "tense": "pretérito_imperfeito",
+    "subject": "eles",
+    "correctAnswer": "bebiam",
+    "verbType": "regular",
+    "category": "daily_routine"
   }
 ]
 

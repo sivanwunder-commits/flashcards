@@ -1,0 +1,305 @@
+.learn-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.learn-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.learn-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #f093fb, #f5576c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.learn-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.learn-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tense-selector {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tense-selector h3 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.tense-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.tense-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.tense-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.tense-button.active {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+}
+
+.tense-details {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tense-info h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #f093fb;
+  padding-bottom: 0.5rem;
+}
+
+.tense-description {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.usage-section,
+.examples-section {
+  margin-bottom: 2rem;
+}
+
+.usage-section h3,
+.examples-section h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.usage-section h3::before {
+  content: "💡";
+}
+
+.examples-section h3::before {
+  content: "📝";
+}
+
+.usage-section p {
+  color: #34495e;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.examples-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.examples-section li {
+  background: #f8f9fa;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #f093fb;
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.conjugation-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #ecf0f1;
+}
+
+.conjugation-section h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.conjugation-section h3::before {
+  content: "🔤";
+}
+
+.regular-verbs h4,
+.irregular-verbs h4 {
+  color: #34495e;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.verb-patterns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pattern-group h5 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: white;
+  border-radius: 8px;
+}
+
+.conjugation-table {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.conjugation-table h4 {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.conjugation-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conjugation-table th {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.conjugation-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ecf0f1;
+  font-size: 0.9rem;
+}
+
+.conjugation-table tr:last-child td {
+  border-bottom: none;
+}
+
+.conjugation-table tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.conjugation-table td.irregular {
+  background: #fff3cd;
+  color: #856404;
+  font-weight: 600;
+}
+
+.irregular-verbs {
+  background: #fff3cd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #ffeaa7;
+}
+
+.irregular-verbs h4 {
+  color: #856404;
+  margin-top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .learn-page {
+    padding: 1rem;
+  }
+
+  .learn-header h1 {
+    font-size: 2rem;
+  }
+
+  .learn-header p {
+    font-size: 1rem;
+  }
+
+  .tense-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .verb-patterns {
+    grid-template-columns: 1fr;
+  }
+
+  .conjugation-table {
+    overflow-x: auto;
+  }
+
+  .conjugation-table table {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .learn-header {
+    padding: 1rem;
+  }
+
+  .tense-selector,
+  .tense-details {
+    padding: 1rem;
+  }
+
+  .conjugation-table th,
+  .conjugation-table td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,423 @@
+/* Statistics Page Styles */
+.statistics-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.statistics-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.statistics-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.statistics-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.statistics-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.statistics-section h2 {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  background: white;
+  border: 3px solid #f093fb;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #4a5568;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  opacity: 0.9;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Performance Grid */
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.performance-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #667eea;
+  transition: transform 0.3s ease;
+}
+
+.performance-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.performance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.performance-header h3 {
+  color: #4a5568;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.performance-accuracy {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.performance-details {
+  margin-top: 1rem;
+}
+
+.performance-bar {
+  background: #e2e8f0;
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.performance-fill {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.performance-stats {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+/* Time Range Selector */
+.time-range-selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.time-range-selector label {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.time-range-selector select {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.time-range-selector select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Progress Chart */
+.progress-chart {
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+  height: 200px;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.progress-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 40px;
+  flex: 1;
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  height: 120px;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar-studied {
+  background: linear-gradient(180deg, #667eea, #764ba2);
+  border-radius: 2px 2px 0 0;
+  min-height: 4px;
+  width: 8px;
+  transition: height 0.3s ease;
+}
+
+.progress-bar-correct {
+  background: linear-gradient(180deg, #48bb78, #38a169);
+  border-radius: 2px 2px 0 0;
+  min-height: 4px;
+  width: 8px;
+  transition: height 0.3s ease;
+}
+
+.progress-date {
+  font-size: 0.7rem;
+  color: #718096;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.progress-accuracy {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #667eea;
+  text-align: center;
+}
+
+/* Streak Info */
+.streak-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.streak-card {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  color: #8b4513;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.streak-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.streak-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.streak-label {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Data Management */
+.data-management {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.export-button,
+.clear-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.export-button {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+}
+
+.export-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(72, 187, 120, 0.3);
+}
+
+.clear-button {
+  background: linear-gradient(135deg, #f56565, #e53e3e);
+  color: white;
+}
+
+.clear-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(245, 101, 101, 0.3);
+}
+
+/* Loading and Error States */
+.loading-message,
+.error-message,
+.no-data-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Inline no-data message for sections */
+.statistics-section .no-data-message {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 2px dashed #e2e8f0;
+  color: #718096;
+  font-style: italic;
+}
+
+.loading-message h2,
+.error-message h2,
+.no-data-message h2 {
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.loading-message p,
+.error-message p,
+.no-data-message p {
+  color: #718096;
+  margin-bottom: 2rem;
+}
+
+.error-message button {
+  padding: 1rem 2rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.error-message button:hover {
+  background: #5a67d8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .statistics-page {
+    padding: 1rem;
+  }
+  
+  .statistics-header h1 {
+    font-size: 2rem;
+  }
+  
+  .statistics-section {
+    padding: 1.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .streak-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .data-management {
+    flex-direction: column;
+  }
+  
+  .progress-chart {
+    height: 150px;
+  }
+  
+  .progress-bar-container {
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statistics-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .statistics-section {
+    padding: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+  }
+}

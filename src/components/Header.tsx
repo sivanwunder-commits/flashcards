@@ -41,6 +41,14 @@ const Header: React.FC = () => {
           </li>
           <li>
             <Link 
+              to="/learn" 
+              className={isActive('/learn') ? 'active' : ''}
+            >
+              Learn
+            </Link>
+          </li>
+          <li>
+            <Link 
               to="/statistics" 
               className={isActive('/statistics') ? 'active' : ''}
             >
