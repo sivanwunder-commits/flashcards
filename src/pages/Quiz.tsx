@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import QuizQuestionComponent from '../components/QuizQuestion';
 import FillInTheBlank from '../components/FillInTheBlank';
 import { loadCards } from '../utils/dataLoader';
 import { quizSessionManager } from '../utils/quizSessionManager';
 import { settingsManager } from '../utils/settingsManager';
 import type { Card as CardType } from '../types/card';
 import type { QuizAnswer, QuizResult } from '../types/quiz';
+// Import component with different name to avoid type collision
+import QuizQuestionComp from '../components/QuizQuestion';
 
 type QuizMode = 'multiple-choice' | 'fill-in-blank';
 
@@ -268,7 +269,7 @@ const Quiz: React.FC = () => {
         )}
 
         {quizMode === 'multiple-choice' ? (
-          <QuizQuestionComponent
+          <QuizQuestionComp
             question={currentQuestion}
             onAnswer={handleAnswer}
             questionNumber={currentQuestionNumber}
