@@ -2,7 +2,21 @@ import type { Card } from '../types/card';
 import type { UserProgress, StudySessionRecord, StatisticsSummary } from '../types/userProgress';
 import type { QuizResult } from '../types/quiz';
 
-// Storage keys
+/**
+ * Progress Tracker Module
+ * 
+ * Manages user progress data persistence and statistics calculation.
+ * Features include:
+ * - localStorage-based data persistence
+ * - Study session recording and tracking
+ * - Quiz result processing
+ * - Statistics aggregation by tense and verb type
+ * - Study streak calculation
+ * - Progress export/import functionality
+ * - Wrong cards tracking for review mode
+ */
+
+// localStorage keys for data persistence
 const STORAGE_KEYS = {
   USER_PROGRESS: 'flashcard_user_progress',
   STUDY_SESSIONS: 'flashcard_study_sessions',
@@ -10,7 +24,7 @@ const STORAGE_KEYS = {
   STATISTICS: 'flashcard_statistics'
 } as const;
 
-// Default user progress
+// Default user progress structure for new users
 const DEFAULT_USER_PROGRESS: UserProgress = {
   userId: 'default_user',
   sessions: [],
@@ -25,9 +39,16 @@ const DEFAULT_USER_PROGRESS: UserProgress = {
   }
 };
 
-// Progress tracking utilities
+/**
+ * Progress tracking utilities object
+ * Provides methods for managing user progress data
+ */
 export const progressTracker = {
-  // Save user progress to localStorage
+  /**
+   * Saves user progress data to localStorage
+   * @param progress - User progress object to save
+   * @returns True if save successful, false otherwise
+   */
   saveUserProgress(progress: UserProgress): boolean {
     try {
       localStorage.setItem(STORAGE_KEYS.USER_PROGRESS, JSON.stringify(progress));
@@ -38,13 +59,16 @@ export const progressTracker = {
     }
   },
 
-  // Load user progress from localStorage
+  /**
+   * Loads user progress data from localStorage
+   * Falls back to default progress if no data exists or load fails
+   * @returns User progress object
+   */
   loadUserProgress(): UserProgress {
     try {
       const stored = localStorage.getItem(STORAGE_KEYS.USER_PROGRESS);
       if (stored) {
         const parsed = JSON.parse(stored);
-        // Validate and merge with defaults
         return this.validateAndMergeProgress(parsed);
       }
     } catch (error) {

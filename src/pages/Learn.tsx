@@ -141,7 +141,7 @@ const Learn: React.FC = () => {
       <div className="learn-header">
         <div className="tropical-header">
           <div className="tropical-icon">🌴</div>
-          <h1>📚 Aprenda os Tempos Verbais</h1>
+          <h1>📚 Learn Verb Tenses</h1>
           <div className="tropical-icon">🌺</div>
         </div>
         <p>🌊 Explore os diferentes tempos verbais em português e suas conjugações 🏝️</p>

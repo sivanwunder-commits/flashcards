@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import type { Card as CardType } from '../types/card';
+import { UI_MESSAGES } from '../utils/constants';
 import './Card.css';
 
+/**
+ * Props for the Card component
+ * Defines the interface for flashcard interaction and navigation
+ */
 interface CardProps {
   card: CardType;
   onCorrect: () => void;
@@ -14,6 +19,19 @@ interface CardProps {
   canGoNext: boolean;
 }
 
+/**
+ * Card Component
+ * 
+ * Interactive flashcard component that displays Portuguese verb conjugation exercises.
+ * Features include:
+ * - Flip animation to reveal answers
+ * - Self-assessment (correct/incorrect feedback)
+ * - Navigation between cards
+ * - Progress tracking display
+ * 
+ * The card shows a phrase with a blank for verb conjugation on the front,
+ * and reveals the completed phrase with the correct answer on the back.
+ */
 const Card: React.FC<CardProps> = ({
   card,
   onCorrect,
@@ -25,15 +43,25 @@ const Card: React.FC<CardProps> = ({
   canGoPrevious,
   canGoNext,
 }) => {
+  // Track whether card is flipped to show answer
   const [isFlipped, setIsFlipped] = useState(false);
+  // Track whether user has self-assessed their answer
   const [hasAnswered, setHasAnswered] = useState(false);
 
+  /**
+   * Flips the card to reveal the answer
+   * Only allows flipping from front to back (not reversible)
+   */
   const handleFlip = () => {
     if (!isFlipped) {
       setIsFlipped(true);
     }
   };
 
+  /**
+   * Records user's self-assessment of their answer
+   * @param isCorrect - Whether the user got the answer correct
+   */
   const handleAnswer = (isCorrect: boolean) => {
     setHasAnswered(true);
     if (isCorrect) {
@@ -43,15 +71,21 @@ const Card: React.FC<CardProps> = ({
     }
   };
 
+  /**
+   * Navigates to the next card and resets card state
+   * Resets flip and answer state for a fresh card experience
+   */
   const handleNext = () => {
-    // Reset card state for next card
     setIsFlipped(false);
     setHasAnswered(false);
     onNext();
   };
 
+  /**
+   * Navigates to the previous card and resets card state
+   * Resets flip and answer state for a fresh card experience
+   */
   const handlePrevious = () => {
-    // Reset card state for previous card
     setIsFlipped(false);
     setHasAnswered(false);
     onPrevious();
@@ -65,7 +99,7 @@ const Card: React.FC<CardProps> = ({
           disabled={!canGoPrevious}
           className="nav-button prev-button"
         >
-          ← Previous
+          {UI_MESSAGES.BUTTON_PREVIOUS}
         </button>
         <span className="card-counter">
           {currentIndex + 1} of {totalCards}
@@ -75,7 +109,7 @@ const Card: React.FC<CardProps> = ({
           disabled={!canGoNext}
           className="nav-button next-button"
         >
-          Next →
+          {UI_MESSAGES.BUTTON_NEXT}
         </button>
       </div>
 
@@ -98,7 +132,7 @@ const Card: React.FC<CardProps> = ({
               </div>
               {!isFlipped && (
                 <div className="flip-hint">
-                  Click to reveal answer
+                  {UI_MESSAGES.FLIP_HINT}
                 </div>
               )}
             </div>
@@ -141,14 +175,14 @@ const Card: React.FC<CardProps> = ({
       {hasAnswered && (
         <div className="continue-section">
           <p className="feedback-message">
-            {isFlipped ? 'Great job!' : 'Keep practicing!'}
+            {isFlipped ? UI_MESSAGES.FEEDBACK_CORRECT : UI_MESSAGES.FEEDBACK_KEEP_PRACTICING}
           </p>
           <button 
             onClick={handleNext}
             disabled={!canGoNext}
             className="continue-button"
           >
-            Continue
+            {UI_MESSAGES.BUTTON_CONTINUE}
           </button>
         </div>
       )}

@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import type { Card } from '../types/card';
 import type { QuizAnswer } from '../types/quiz';
+import { checkAnswerMatch } from '../utils/answerUtils';
+import { useQuizTimer } from '../hooks/useQuizTimer';
+import { QUIZ_CONSTANTS, UI_MESSAGES } from '../utils/constants';
 import './FillInTheBlank.css';
 
+/**
+ * Props for the FillInTheBlank component
+ */
 interface FillInTheBlankProps {
   card: Card;
   onAnswer: (answer: QuizAnswer) => void;
@@ -11,6 +17,21 @@ interface FillInTheBlankProps {
   timeLimit?: number; // in seconds
 }
 
+/**
+ * FillInTheBlank Component
+ * 
+ * Text input quiz component for Portuguese verb conjugation practice.
+ * Features include:
+ * - Free-text input for verb conjugation
+ * - Fuzzy matching with normalization (handles punctuation, case, whitespace)
+ * - Optional time limit with countdown timer
+ * - Hint system (verb type and tense information)
+ * - Visual feedback (correct/incorrect highlighting)
+ * - Auto-submit when time expires
+ * 
+ * This component provides a more challenging quiz format compared to
+ * multiple choice, requiring users to recall the exact conjugation.
+ */
 const FillInTheBlank: React.FC<FillInTheBlankProps> = ({
   card,
   onAnswer,
@@ -18,74 +39,44 @@ const FillInTheBlank: React.FC<FillInTheBlankProps> = ({
   totalQuestions,
   timeLimit
 }) => {
+  // User's typed answer
   const [userAnswer, setUserAnswer] = useState('');
+  // Track whether user has submitted their answer
   const [hasAnswered, setHasAnswered] = useState(false);
-  const [timeRemaining, setTimeRemaining] = useState(timeLimit || 0);
-  const [startTime, setStartTime] = useState(Date.now());
+  // Track whether hint is currently displayed
   const [showHint, setShowHint] = useState(false);
+  // Track whether the submitted answer was correct
   const [isCorrect, setIsCorrect] = useState(false);
 
-  // Reset state when card changes
+  // Use custom timer hook for countdown functionality
+  const { timeRemaining, startTime } = useQuizTimer({
+    timeLimit,
+    hasAnswered,
+    onTimeout: handleSubmit,
+    resetDependency: card.id,
+  });
+
+  /**
+   * Reset state when card changes to ensure fresh start
+   */
   useEffect(() => {
     setUserAnswer('');
     setHasAnswered(false);
-    setTimeRemaining(timeLimit || 0);
-    setStartTime(Date.now());
     setShowHint(false);
     setIsCorrect(false);
-  }, [card.id, timeLimit]);
+  }, [card.id]);
 
-  // Timer effect
-  useEffect(() => {
-    if (timeLimit && timeLimit > 0 && !hasAnswered) {
-      const timer = setInterval(() => {
-        setTimeRemaining(prev => {
-          if (prev <= 1) {
-            clearInterval(timer);
-            handleSubmit();
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-
-      return () => clearInterval(timer);
-    }
-  }, [timeLimit, hasAnswered]);
-
-  const normalizeAnswer = (answer: string): string => {
-    return answer
-      .toLowerCase()
-      .trim()
-      .replace(/[.,!?;:]/g, '') // Remove punctuation
-      .replace(/\s+/g, ' '); // Normalize whitespace
-  };
-
-  const checkAnswer = (userInput: string): boolean => {
-    const normalizedUser = normalizeAnswer(userInput);
-    const normalizedCorrect = normalizeAnswer(card.correctAnswer);
-    
-    // Exact match
-    if (normalizedUser === normalizedCorrect) {
-      return true;
-    }
-
-    // Check for common variations and typos
-    const variations = [
-      card.correctAnswer.toLowerCase(),
-      card.correctAnswer.toLowerCase().replace(/[.,!?;:]/g, ''),
-      // Add more variations as needed
-    ];
-
-    return variations.some(variation => 
-      normalizeAnswer(variation) === normalizedUser
-    );
-  };
-
-  const handleSubmit = () => {
+  /**
+   * Handles answer submission
+   * - Validates answer is not empty
+   * - Checks correctness using utility function
+   * - Records time spent
+   * - Triggers callback after brief delay to show feedback
+   */
+  function handleSubmit() {
     if (hasAnswered || !userAnswer.trim()) return;
 
-    const correct = checkAnswer(userAnswer);
+    const correct = checkAnswerMatch(userAnswer, card.correctAnswer);
     setIsCorrect(correct);
     setHasAnswered(true);
 
@@ -103,8 +94,8 @@ const FillInTheBlank: React.FC<FillInTheBlankProps> = ({
     // Delay before calling onAnswer to show feedback
     setTimeout(() => {
       onAnswer(quizAnswer);
-    }, 2000);
-  };
+    }, QUIZ_CONSTANTS.ANSWER_FEEDBACK_DELAY_MS);
+  }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !hasAnswered) {
@@ -112,13 +103,17 @@ const FillInTheBlank: React.FC<FillInTheBlankProps> = ({
     }
   };
 
+  /**
+   * Generates feedback message based on answer correctness
+   * @returns Feedback message string
+   */
   const getFeedbackMessage = () => {
     if (!hasAnswered) return '';
     
     if (isCorrect) {
-      return '✅ Correct! Well done!';
+      return UI_MESSAGES.CORRECT_ANSWER;
     } else {
-      return `❌ Incorrect. The correct answer was: ${card.correctAnswer}`;
+      return `${UI_MESSAGES.INCORRECT_ANSWER} ${card.correctAnswer}`;
     }
   };
 

@@ -1,8 +1,27 @@
 import type { Card } from '../types/card';
 import { settingsManager } from './settingsManager';
 
+/**
+ * Data Loader Module
+ * 
+ * Handles loading and validation of flashcard data from JSON files.
+ * Features include:
+ * - Type-safe card validation
+ * - Tense filtering based on user settings
+ * - Graceful error handling
+ * - Fallback mechanisms for resilience
+ */
+
+// Base URL for data assets (configured by build tool)
 const DATA_BASE_URL = (import.meta as any).env?.BASE_URL ?? '/';
 
+/**
+ * Type guard to validate card data structure
+ * Ensures all required string fields are present and correctly typed
+ * 
+ * @param value - Unknown value to validate
+ * @returns True if value is a valid Card object
+ */
 function isCard(value: unknown): value is Card {
   if (typeof value !== 'object' || value === null) return false;
   const obj = value as Record<string, unknown>;
@@ -19,6 +38,18 @@ function isCard(value: unknown): value is Card {
   return requiredStringFields.every((key) => typeof obj[key] === 'string');
 }
 
+/**
+ * Loads flashcard data from JSON file with filtering and validation
+ * 
+ * Process:
+ * 1. Fetches cards.json from public data directory
+ * 2. Validates each card's structure
+ * 3. Filters cards based on user's enabled tenses setting
+ * 4. Falls back to all cards if no matches or settings unavailable
+ * 
+ * @returns Promise resolving to array of validated Card objects
+ * @throws Error if fetch fails, data is invalid, or no valid cards found
+ */
 export async function loadCards(): Promise<Card[]> {
   const url = `${DATA_BASE_URL}data/cards.json`;
   const response = await fetch(url, { cache: 'no-cache' });
@@ -29,20 +60,21 @@ export async function loadCards(): Promise<Card[]> {
   if (!Array.isArray(data)) {
     throw new Error('Invalid cards data: expected an array');
   }
+  
+  // Validate and collect cards
   const cards: Card[] = [];
   for (const item of data) {
     if (isCard(item)) {
       cards.push(item);
-    } else {
-      // Skip invalid entries rather than failing the whole load
-      // Could add logging here if needed
     }
+    // Invalid entries are silently skipped to avoid failing entire load
   }
+  
   if (cards.length === 0) {
     throw new Error('No valid cards found in cards.json');
   }
 
-  // Filter cards based on enabled tenses setting
+  // Filter cards based on user's enabled tenses setting
   try {
     const settings = settingsManager.getSettings();
     const enabledTenses = settings.enabledTenses || [

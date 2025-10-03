@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import type { QuizQuestion, QuizAnswer } from '../types/quiz';
+import { useQuizTimer } from '../hooks/useQuizTimer';
+import { QUIZ_CONSTANTS, UI_MESSAGES } from '../utils/constants';
 import './QuizQuestion.css';
 
+/**
+ * Props for the QuizQuestion component
+ */
 interface QuizQuestionProps {
   question: QuizQuestion;
   onAnswer: (answer: QuizAnswer) => void;
@@ -10,6 +15,20 @@ interface QuizQuestionProps {
   timeLimit?: number; // in seconds
 }
 
+/**
+ * QuizQuestion Component
+ * 
+ * Displays a multiple-choice quiz question for Portuguese verb conjugation practice.
+ * Features include:
+ * - Multiple choice selection (A, B, C, D)
+ * - Optional time limit with countdown timer
+ * - Immediate visual feedback (correct/incorrect highlighting)
+ * - Answer tracking with time spent calculation
+ * - Auto-submit when time expires
+ * 
+ * The component resets its state when the question changes to ensure
+ * a fresh start for each new question.
+ */
 const QuizQuestion: React.FC<QuizQuestionProps> = ({
   question,
   onAnswer,
@@ -17,36 +36,24 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
   totalQuestions,
   timeLimit
 }) => {
+  // Track which answer option the user selected (0-3)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+  // Track whether user has submitted their answer
   const [hasAnswered, setHasAnswered] = useState(false);
-  const [timeRemaining, setTimeRemaining] = useState(timeLimit || 0);
-  const [startTime, setStartTime] = useState(Date.now());
+
+  // Use custom timer hook for countdown functionality
+  const { timeRemaining, startTime } = useQuizTimer({
+    timeLimit,
+    hasAnswered,
+    onTimeout: () => handleAnswer(selectedAnswer || 0),
+    resetDependency: question.id,
+  });
 
   // Reset state when question changes
   React.useEffect(() => {
     setSelectedAnswer(null);
     setHasAnswered(false);
-    setTimeRemaining(timeLimit || 0);
-    setStartTime(Date.now());
-  }, [question.id, timeLimit]);
-
-  // Timer effect
-  React.useEffect(() => {
-    if (timeLimit && timeLimit > 0 && !hasAnswered) {
-      const timer = setInterval(() => {
-        setTimeRemaining(prev => {
-          if (prev <= 1) {
-            // Time's up - auto-submit
-            handleAnswer(selectedAnswer || 0);
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-
-      return () => clearInterval(timer);
-    }
-  }, [timeLimit, hasAnswered, selectedAnswer]);
+  }, [question.id]);
 
   const handleAnswer = (answerIndex: number) => {
     if (hasAnswered) return;
@@ -87,9 +94,13 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
     }
   };
 
+  /**
+   * Gets the label for an option (A, B, C, D)
+   * @param index - Option index (0-3)
+   * @returns Option label string
+   */
   const getOptionLabel = (index: number) => {
-    const labels = ['A', 'B', 'C', 'D'];
-    return labels[index] || String(index + 1);
+    return QUIZ_CONSTANTS.OPTION_LABELS[index] || String(index + 1);
   };
 
   return (
@@ -99,7 +110,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
           Question {questionNumber} of {totalQuestions}
         </div>
         {timeLimit && timeLimit > 0 && (
-          <div className={`timer ${timeRemaining <= 10 ? 'warning' : ''}`}>
+          <div className={`timer ${timeRemaining <= QUIZ_CONSTANTS.TIMER_WARNING_THRESHOLD ? 'warning' : ''}`}>
             {timeRemaining}s
           </div>
         )}
@@ -129,13 +140,13 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
         <div className="answer-feedback">
           <div className={`feedback-message ${selectedAnswer === question.correctAnswerIndex ? 'correct' : 'incorrect'}`}>
             {selectedAnswer === question.correctAnswerIndex ? (
-              <span>✅ Correct! Well done!</span>
+              <span>{UI_MESSAGES.CORRECT_ANSWER}</span>
             ) : (
-              <span>❌ Incorrect. The correct answer was: <strong>{question.options[question.correctAnswerIndex]}</strong></span>
+              <span>{UI_MESSAGES.INCORRECT_ANSWER} <strong>{question.options[question.correctAnswerIndex]}</strong></span>
             )}
           </div>
           <button onClick={handleContinue} className="continue-button">
-            Continue
+            {UI_MESSAGES.BUTTON_CONTINUE}
           </button>
         </div>
       )}
