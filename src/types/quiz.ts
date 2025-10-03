@@ -1,7 +1,5 @@
 // Type definitions for quiz functionality
 
-import type { Card } from './card';
-
 export interface QuizQuestion {
   id: string;
   question: string; // The phrase with blank

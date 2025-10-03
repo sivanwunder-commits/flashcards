@@ -126,7 +126,7 @@ const FillInTheBlank: React.FC<FillInTheBlankProps> = ({
     <div className="fill-in-blank-container">
       <div className="question-header">
         <span className="question-number">Question {questionNumber} / {totalQuestions}</span>
-        {timeLimit > 0 && (
+        {timeLimit && timeLimit > 0 && (
           <span className="time-remaining">Time: {timeRemaining}s</span>
         )}
       </div>

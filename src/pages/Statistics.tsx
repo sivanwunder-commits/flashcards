@@ -6,7 +6,7 @@ import type { StatisticsSummary } from '../types/userProgress';
 import './Statistics.css';
 
 const Statistics: React.FC = () => {
-  const [cards, setCards] = useState<Card[]>([]);
+  const [_cards, setCards] = useState<Card[]>([]);
   const [statistics, setStatistics] = useState<StatisticsSummary | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -262,7 +262,7 @@ const Statistics: React.FC = () => {
         </div>
         
         <div className="progress-chart">
-          {progressData.map((day, index) => (
+          {progressData.map((day) => (
             <div key={day.date} className="progress-day">
               <div className="progress-bar-container">
                 <div 
@@ -332,21 +332,8 @@ const Statistics: React.FC = () => {
               <h3>📊 Performance Breakdown</h3>
               <div className="breakdown-grid">
                 <div className="breakdown-item">
-                  <span className="breakdown-label">Average Time per Question:</span>
-                  <span className="breakdown-value">
-                    {statistics.averageTimePerQuestion ? 
-                      `${Math.round(statistics.averageTimePerQuestion / 1000)}s` : 
-                      'N/A'
-                    }
-                  </span>
-                </div>
-                <div className="breakdown-item">
-                  <span className="breakdown-label">Total Study Sessions:</span>
-                  <span className="breakdown-value">{statistics.totalSessions || 0}</span>
-                </div>
-                <div className="breakdown-item">
-                  <span className="breakdown-label">Best Single Session:</span>
-                  <span className="breakdown-value">{statistics.bestSessionScore || 0}%</span>
+                  <span className="breakdown-label">Study Streak:</span>
+                  <span className="breakdown-value">{statistics.studyStreaks} days</span>
                 </div>
                 <div className="breakdown-item">
                   <span className="breakdown-label">Most Studied Tense:</span>

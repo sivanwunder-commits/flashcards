@@ -1,7 +1,5 @@
 // Type definitions for tracking user progress and sessions
 
-import type { Card } from './card';
-
 export interface StudySessionRecord {
   date: string; // ISO date string (YYYY-MM-DD or full ISO timestamp)
   cardsStudied: string[]; // store card ids for compactness
