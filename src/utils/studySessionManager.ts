@@ -216,24 +216,15 @@ class StudySessionManager {
         totalStudied: 0,
         totalCorrect: 0,
         accuracyByTense: {},
-        accuracyByVerbType: {
-          regular: 0,
-          irregular: 0
-        }
+        accuracyByVerbType: {},
+        studyStreaks: 0,
+        lastStudyDate: null
       }
     };
   }
 
-  private updateStatistics(sessionRecord: StudySessionRecord): void {
-    if (!this.userProgress) return;
-    
-    const stats = this.userProgress.statistics;
-    stats.totalStudied += sessionRecord.cardsStudied.length;
-    stats.totalCorrect += sessionRecord.correctAnswers.length;
-    
-    // Update accuracy by tense and verb type would require card data
-    // This will be implemented when we have access to card information
-  }
+  // Method removed - statistics are now updated via progressTracker
+  // which has access to all necessary card data
 
   // Utility Methods
   resetAllData(): void {

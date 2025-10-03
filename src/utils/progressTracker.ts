@@ -160,7 +160,7 @@ export const progressTracker = {
   },
 
   // Update statistics based on study data
-  updateStatistics(progress: UserProgress, cardsStudied: string[], correctAnswers: string[], incorrectAnswers: string[]): void {
+  updateStatistics(progress: UserProgress, cardsStudied: string[], correctAnswers: string[], _incorrectAnswers: string[]): void {
     const stats = progress.statistics;
     
     // Update totals
@@ -341,10 +341,8 @@ export const statisticsCalculator = {
     
     sortedSessions.forEach(session => {
       const sessionDate = new Date(session.date);
-      const sessionDateString = sessionDate.toDateString();
       
       if (lastDate) {
-        const lastDateString = lastDate.toDateString();
         const daysDiff = Math.floor((sessionDate.getTime() - lastDate.getTime()) / (1000 * 60 * 60 * 24));
         
         if (daysDiff === 1) {

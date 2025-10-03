@@ -7,14 +7,22 @@ export interface StudySessionRecord {
   cardsStudied: string[]; // store card ids for compactness
   correctAnswers: string[]; // card ids answered correctly
   incorrectAnswers: string[]; // card ids answered incorrectly
+  timeSpent?: number; // optional time spent on session in milliseconds
+}
+
+export interface AccuracyRecord {
+  correct: number;
+  total: number;
 }
 
 export interface StatisticsSummary {
   totalStudied: number;
   totalCorrect: number;
-  // Accuracy by tense and verb type left as index signatures for flexibility during Phase 2
-  accuracyByTense: Record<string, number>; // key: tense, value: accuracy 0..1
-  accuracyByVerbType: Record<'regular' | 'irregular', number>;
+  // Accuracy by tense and verb type with detailed tracking
+  accuracyByTense: Record<string, AccuracyRecord>;
+  accuracyByVerbType: Record<string, AccuracyRecord>;
+  studyStreaks: number; // current study streak in days
+  lastStudyDate: string | null; // ISO date string of last study session
 }
 
 export interface UserProgress {
