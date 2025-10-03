@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import QuizQuestion from '../components/QuizQuestion';
+import QuizQuestionComponent from '../components/QuizQuestion';
 import FillInTheBlank from '../components/FillInTheBlank';
 import { loadCards } from '../utils/dataLoader';
 import { quizSessionManager } from '../utils/quizSessionManager';
@@ -268,7 +268,7 @@ const Quiz: React.FC = () => {
         )}
 
         {quizMode === 'multiple-choice' ? (
-          <QuizQuestion
+          <QuizQuestionComponent
             question={currentQuestion}
             onAnswer={handleAnswer}
             questionNumber={currentQuestionNumber}

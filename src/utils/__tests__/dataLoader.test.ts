@@ -4,7 +4,7 @@ import type { Card } from '../../types/card'
 
 // Mock fetch globally
 const mockFetch = vi.fn()
-global.fetch = mockFetch
+globalThis.fetch = mockFetch as any
 
 describe('dataLoader', () => {
   beforeEach(() => {
